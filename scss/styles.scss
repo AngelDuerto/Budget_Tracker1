@@ -11,13 +11,13 @@ $main-font-color: rgb(93, 92, 92);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-//Linear Gradient
+// Linear Gradient
 @mixin gradient($color1, $color2){
     background: linear-gradient(to right, $color1, $color2);
     background-size: 200% 200%;
 }
 
-//Animation for background
+// Animation for background
 @keyframes gradient-shift{
     0%{
         background-position: 0% 50%;
@@ -40,7 +40,7 @@ body{
     height: 100vh;
     color: $primary-color;
     
-    //Navigation Bar
+    // Navigation Bar
     .navBar{
         position: fixed;
         top: 0;
@@ -48,7 +48,7 @@ body{
     }
 }
 
-//Logo of company
+// Logo of company
 .trackLogo{
     height: 300px;
     margin-top: -60px;
@@ -63,7 +63,7 @@ main{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 
-    //Budget Tracker heading
+    // Budget Tracker heading
     h1{
         color: $primary-color;
         padding: 25px 20px;
@@ -72,7 +72,7 @@ main{
     }
 }
 
-    //Budget Tracker form
+    // Budget Tracker form
 form{
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +86,7 @@ form{
         justify-content: flex-end;
     }
 
-        //Label (Names of inputs)
+        // Label (Names of inputs)
     label{
         color: $secondary-color;
         font-weight: bold;
@@ -102,7 +102,7 @@ form{
         border-radius: 5px;
     }
 
-        //submit button, and added animation for it
+        // Submit button, and added animation for it
     button{
         @include gradient(#fbe9d7, #f6d5f7);
         padding: 10px 40px;
@@ -121,14 +121,14 @@ form{
     }
 }
 
-//Delete button (from JS)
+// Delete button (from JS)
 .deleteBtn{
     cursor: pointer;
     color: $secondary-color;
     background-color: white;
 }
 
-    //Table styling
+    // Table styling
 table{
     width: 100%;
     border-collapse: collapse;
@@ -183,7 +183,7 @@ table td{
 }
 //Responsive Design
 
-@media (max-width: 1330px){ //PC and Tablets
+@media (max-width: 1330px){ // PC and Tablets
     .navBar{
         display: flex;
         justify-content: center;
@@ -225,7 +225,7 @@ table td{
     }
 }
 
-@media(max-width: 480px){ //Phones, and small phones
+@media(max-width: 480px){ // Phones, and small phones
     body{
         padding: 10px;
     }
