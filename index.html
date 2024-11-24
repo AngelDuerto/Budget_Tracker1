@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/track1.png">
+    <title>Track</title>
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+            <ul>
+                <img class="trackLogo" src="images/track1.png" alt="track logo">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="inputs">
+            <h1>Budget Tracker</h1>
+            <form id="budgetForm">
+                <div class="formGroup">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+
+                    <label for="description">Description:</label>
+                    <input type="text" id="description" placeholder="Add a Description" required>
+
+                    <label for="type">Type:</label>
+                    <select id="type" required>
+                        <option value="" disabled selected>Select type</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" placeholder="$0.00" required>
+                </div>
+
+                <div class="formGroup">
+                    <button id="submitTrns" type="button">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="summaryTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>?</th>
+                    </tr>
+                </thead>
+                <tbody id="trnsList">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="total"><strong>Total Budget</strong></td>
+                        <td colspan="4" id="totalBudget">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="total"><strong>Total Income</strong></td>
+                        <td colspan="4" id="totalIncome">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="total"><strong>Total Expenses</strong></td>
+                        <td colspan="4" id="totalExpenses">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+        <p>Track It All. &copy; 2024 by Angel</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
